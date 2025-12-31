@@ -4,7 +4,7 @@
 Dự án thiết kế hệ thống mạng LAN/WLAN cho trường THPT Nguyễn Huệ nhằm cung cấp hạ tầng kết nối ổn định, bảo mật cho hơn 1000 giáo viên và học sinh. Hệ thống tập trung vào việc phân tách lưu lượng và quản lý tập trung.
 
 ## 2. Sơ đồ mạng (Topology)
-![Topology Diagram](images/topology.png)
+![Topology Diagram](image/Sodo.png)
 *Kiến trúc: Phân cấp 3 lớp (Hierarchical Design: Core - Distribution - Access).*
 
 ## 3. Quy hoạch VLAN (VLAN Planning)
