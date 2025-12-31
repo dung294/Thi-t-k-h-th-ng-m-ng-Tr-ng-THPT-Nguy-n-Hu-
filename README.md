@@ -70,14 +70,23 @@ Hệ thống sử dụng dải mạng gốc **10.0.0.0/16**, được chia nhỏ
 
 ### 1. Cấu hình Cisco ASA (NAT & ACL)
 ```bash
-! NAT Static cho Web Server DMZ (Ánh xạ 192.168.2.2 -> 200.200.200.10)
-object network WEB-SERVER
+object network ALL-VLAN-OUT
+ subnet 10.10.0.0 255.255.0.0
+ nat (inside,outside) dynamic interface
+object network LAN-OUTSIDE
+ subnet 10.10.22.0 255.255.255.0
+ nat (inside,outside) dynamic interface
+object network NAT-INSIDE-OUTSIDE
+ subnet 172.169.1.0 255.255.255.0
+ nat (inside,outside) dynamic interface
+object network nat-dmz-outside
  host 192.168.2.2
- nat (dmz,outside) static 200.200.200.10 service tcp 80 80
-
-! ACL cho phép truy cập Web (Port 80) từ Internet vào DMZ
-access-list OUTSIDE-IN extended permit tcp any host 192.168.2.2 eq 80
-access-group OUTSIDE-IN in interface outside
+ nat (dmz,outside) static 200.200.200.10
+!
+route outside 0.0.0.0 0.0.0.0 200.200.200.2 1
+route outside 192.168.3.0 255.255.255.0 200.200.200.2 1
+route inside 10.10.22.0 255.255.255.0 172.169.1.2 1
+route inside 10.10.0.0 255.255.0.0 172.169.1.2 1
 ````
 ### 2. Cấu hình bảo mật VLAN
 ```bash
