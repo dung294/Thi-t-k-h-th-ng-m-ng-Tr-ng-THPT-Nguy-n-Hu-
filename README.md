@@ -101,8 +101,8 @@ interface Vlan20
 * Pc Ping vào WEB ( nguyenhue.com)
 ![](image/pingdmz.png)
 * Pc ping ra internet cụ thể là google.com
-![](image/Screenshot2025-12-15180505.png)
+![](image/15180505.png)
 * ACL bảo mật cho khu hành chính ping từ khu học sinh
-  ![](image/Screenshot2025-12-31163454.png)
+  ![](image/31163454.png)
 * Ping từ ngoài Internet vào WEB
 ![](image/pcindmz.png)
