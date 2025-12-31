@@ -1,4 +1,3 @@
-# Thiết kế hệ thống mạng Trường Học
 # Network Design & Implementation for Nguyen Hue High School
 
 ## 1. Tổng quan dự án (Project Overview)
