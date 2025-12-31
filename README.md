@@ -99,5 +99,6 @@ interface Vlan20
 
 ## DEMO
 * Pc Ping vào WEB ( nguyenhue.com)
- 
+![](image/pingdmz.png)
 * Pc ping ra internet cụ thể là google.com
+![](image/pingdmz.png)
