@@ -21,7 +21,7 @@ Hệ thống được thiết kế tuân theo mô hình **Cisco Hierarchical Net
 * **Security Edge:** Sử dụng Cisco ASA 5505 làm Gateway biên giới, thực hiện NAT và quản lý vùng DMZ.
 
 ![Topology Diagram](image/Sodo.png)
-*(Sơ đồ nguyên lý hệ thống - Thay thế hình ảnh này bằng sơ đồ của bạn)*
+*(Sơ đồ nguyên lý hệ thống)*
 
 Gồm 2 khu
 * Khu hành chính
